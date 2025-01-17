@@ -1,0 +1,115 @@
+/* General App Styles */
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f7f7f7; /* Light background for the app */
+    padding: 20px;
+  }
+  
+  /* Card Styling */
+  .background{
+    width: 100%;
+    max-width: 700px; /* Maximum width for the card */
+    padding: 20px;
+    margin: 20px auto; /* Center the card with some margin */
+    background-color: grey; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border: 1px solid #ddd; /* Light border */
+  }
+  .card {
+    width: 100%;
+    max-width: 600px; /* Maximum width for the card */
+    padding: 20px;
+    margin: 20px auto; /* Center the card with some margin */
+    background-color: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border: 1px solid #ddd; /* Light border */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth hover effect */
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333; /* Dark text color for readability */
+  }
+  
+  /* Card Content Styling */
+  .card-content {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  /* Data List */
+  ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background-color: #f4f4f4; /* Light background for each list item */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px; /* Slight rounding for list items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+    transition: transform 0.2s, background-color 0.2s ease; /* Hover effects for items */
+  }
+  
+  li:hover {
+    transform: translateX(5px); /* Slide effect on hover */
+    background-color: #e8e8e8; /* Change background color on hover */
+  }
+
+  .flex-container {
+    width: 100%;
+    max-width: 600px; /* Maximum width for the card */
+    margin: 20px auto; /* Center the card with some margin */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Button Styling */
+  .task-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effect */
+  }
+
+    /* Button Styling */
+    .all-button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      background-color: grey;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effect */
+    }
+  
+  .task-button:hover:enabled {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  /* Loading Text */
+  p {
+    font-size: 1em;
+    color: #888;
+  }
+  
