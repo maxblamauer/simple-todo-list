@@ -1,115 +1,109 @@
 /* General App Styles */
 .App {
-    font-family: sans-serif;
-    text-align: center;
-    background-color: #f7f7f7; /* Light background for the app */
-    padding: 20px;
-  }
-  
-  /* Card Styling */
-  .background{
-    width: 100%;
-    max-width: 700px; /* Maximum width for the card */
-    padding: 20px;
-    margin: 20px auto; /* Center the card with some margin */
-    background-color: grey; /* White background for the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-    border: 1px solid #ddd; /* Light border */
-  }
-  .card {
-    width: 100%;
-    max-width: 600px; /* Maximum width for the card */
-    padding: 20px;
-    margin: 20px auto; /* Center the card with some margin */
-    background-color: #fff; /* White background for the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-    border: 1px solid #ddd; /* Light border */
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth hover effect */
-  }
-  
-  /* Card Title */
-  .card-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333; /* Dark text color for readability */
-  }
-  
-  /* Card Content Styling */
-  .card-content {
-    font-size: 1em;
-    color: #555;
-  }
-  
-  /* Data List */
-  ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    background-color: #f4f4f4; /* Light background for each list item */
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px; /* Slight rounding for list items */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
-    transition: transform 0.2s, background-color 0.2s ease; /* Hover effects for items */
-  }
-  
-  li:hover {
-    transform: translateX(5px); /* Slide effect on hover */
-    background-color: #e8e8e8; /* Change background color on hover */
-  }
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f7f7f7; /* Light background for the app */
+  padding: 20px;
+  min-height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content from the top */
+  align-items: center;
+}
+/* Card Styling */
+.background{
+  width: 100%;
+  max-width: 650px; /* Maximum width for the card */
+  padding: 7px;
+  margin: 7px auto; /* Center the card with some margin */
+  background-color: rgb(245, 242, 242); /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  border: 2px solid #ddd; /* Light border */
+}
+/* Card Styling */
+.card {
+  width: 100%;
+  max-width: 600px; /* Maximum width for the card */
+  padding: 20px;
+  margin: 20px auto; /* Center the card with some margin */
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+  border: none; /* Remove border for a cleaner look */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
 
-  .flex-container {
-    width: 100%;
-    max-width: 600px; /* Maximum width for the card */
-    margin: 20px auto; /* Center the card with some margin */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-  }
-  
-  .flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Button Styling */
-  .task-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effect */
-  }
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
 
-    /* Button Styling */
-    .all-button {
-      padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      background-color: grey;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effect */
-    }
-  
-  .task-button:hover:enabled {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight scale effect on hover */
-  }
-  
-  /* Loading Text */
-  p {
-    font-size: 1em;
-    color: #888;
-  }
+/* Card Content */
+.card-content {
+  font-size: 1.2em; /* Slightly larger text for better readability */
+  color: #333333; /* Dark text color for contrast */
+  text-align: left; /* Center-align the text */
+  font-weight: 500; /* Semi-bold text for emphasis */
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color for readability */
+}
+
+.flex-container {
+  width: 100%;
+  max-width: 600px; /* Maximum width for the card */
+  margin: 20px auto; /* Center the card with some margin */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Vertically align the checkbox and label */
+  justify-content: space-between; /* Push the button to the far right */
+  gap: 10px; /* Adjust the spacing between the checkbox and label */
+}
+
+.checkbox-container label {
+  flex-grow: 1; /* Allows the label to take up the remaining space */
+}
+
+.checkbox-container button {
+  margin-left: auto; /* Ensures the button stays at the far right */
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button Styling */
+.task-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effect */
+}
+
+.task-button:hover:enabled {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+  /* When the task is completed, apply the line-through effect */
+.completed {
+  text-decoration: line-through;
+  color: #888; /* Optional: you can adjust the color to make it more faded */
+}
   

@@ -2,34 +2,27 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { saveTasks } from "../utilities/utilities";
+import { v4 as uuidv4 } from "uuid";
 
 const ModalComponent = ({ show, onHide, tasks, setTasks }) => {
-  // State to manage form inputs
-  const [title, setTitle] = useState(""); // For email input
+  const [title, setTitle] = useState("");
 
-  // Handle email input change
   const handleTitleChange = (e) => setTitle(e.target.value);
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // If there's a title, add the new task
     if (title.trim()) {
-      // Create a new task object
       const newTask = {
-        id: tasks.length + 1,
+        id: uuidv4(),
         title: title,
         completed: false,
       };
-
-      // Add the new task to the list of tasks
-      setTasks((prevTasks) => [...prevTasks, newTask]);
-
-      // Reset title input field
+      saveTasks(newTask);
+      const mergedTasks = [...tasks, newTask];
+      setTasks(mergedTasks);
       setTitle("");
-
-      // Close the modal
       onHide(false);
     }
   };
